@@ -1,5 +1,7 @@
 package cc.cannot.distance;
 
+import cc.cannot.util.VectorUtils;
+
 import java.text.DecimalFormat;
 import java.util.List;
 
@@ -36,8 +38,9 @@ public class CosDistance {
         }
     }
 
-    private double calSimilarity(double[] doubles, double[] doubles1) {
+    private double calSimilarity(double[] vec1 , double[] vec2) {
         //TODO
+        return VectorUtils.multiply(vec1,vec2)/(VectorUtils.module(vec1)*VectorUtils.module(vec2));
     }
 }
 
